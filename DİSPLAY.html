@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Özelliği</title>
+    <style>
+        /* Genel Stil */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #390b8e;
+            color: #fff;
+            padding: 10px 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .content {
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .example {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 10px 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .block-box {
+            display: block;
+            background-color: lightcoral;
+        }
+
+        .inline-box {
+            display: inline;
+            background-color: lightgreen;
+        }
+
+        .inline-block-box {
+            display: inline-block;
+            background-color: lightyellow;
+        }
+
+        .flex-box {
+            display: flex;
+            background-color: lightseagreen;
+        }
+
+        .grid-box {
+            display: grid;
+            background-color: lightpink;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .none-box {
+            display: none;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Display Özelliği - Açıklamalarla</h1>
+    </header>
+
+    <div class="content">
+        <!-- Block Example -->
+        <div class="section">
+            <h2>1. Block (Blok Öğesi)</h2>
+            <p>Blok öğesi, tam genişlikte yer kaplar ve bir sonraki öğeden yeni bir satıra geçer.</p>
+            <div class="example">
+                <div class="box block-box">Blok 1</div>
+                <div class="box block-box">Blok 2</div>
+            </div>
+        </div>
+
+        <!-- Inline Example -->
+        <div class="section">
+            <h2>2. Inline (Satır İçi Öğesi)</h2>
+            <p>Satır içi öğeleri, yalnızca ihtiyaç duydukları kadar genişlik alır ve aynı satırda sıralanır.</p>
+            <div class="example">
+                <div class="box inline-box">İnline 1</div>
+                <div class="box inline-box">İnline 2</div>
+            </div>
+        </div>
+
+        <!-- Inline-block Example -->
+        <div class="section">
+            <h2>3. Inline-block (Satır İçi Blok Öğesi)</h2>
+            <p>Inline-block, hem satır içi hem de blok öğesi gibi davranır, yani kendi genişlik ve yüksekliğini alırken aynı satırda yer alır.</p>
+            <div class="example">
+                <div class="box inline-block-box">Inline-block 1</div>
+                <div class="box inline-block-box">Inline-block 2</div>
+            </div>
+        </div>
+
+        <!-- Flex Example -->
+        <div class="section">
+            <h2>4. Flex (Esnek Konteyner)</h2>
+            <p>Flex, öğeleri esnek bir şekilde düzenlemeye olanak tanır, öğeler yatayda ya da dikeyde sıralanabilir.</p>
+            <div class="example flex-box">
+                <div class="box">Flex 1</div>
+                <div class="box">Flex 2</div>
+                <div class="box">Flex 3</div>
+            </div>
+        </div>
+
+        <!-- Grid Example -->
+        <div class="section">
+            <h2>5. Grid (Izgara Konteyneri)</h2>
+            <p>Grid, öğeleri bir ızgara düzeninde yerleştirmenize olanak tanır, satır ve sütun düzeni sağlar.</p>
+            <div class="example grid-box">
+                <div class="box">Grid 1</div>
+                <div class="box">Grid 2</div>
+                <div class="box">Grid 3</div>
+            </div>
+        </div>
+
+        <!-- None Example -->
+        <div class="section">
+            <h2>6. None (Gizleme)</h2>
+            <p>None, öğeyi tamamen gizler. Görünmez olur ve sayfa düzeninde yer kaplamaz.</p>
+            <div class="example">
+                <div class="box none-box">Bu öğe gizli</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
